@@ -13,6 +13,8 @@ namespace CSharpCorner_Challengers
             int CurrentNum = 1;
             int temp = 0;
 
+            Console.Write(0 + " "); //  Write first fibonacci number
+
             //  1 1 2 3 5 8 13 21 34 55 
             //  First fibonacci number is 1
             for (int i = 0; i < length; i++)
