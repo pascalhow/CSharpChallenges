@@ -13,6 +13,7 @@ namespace CSharpCorner_Challengers
             SAME_STRAIGHT_LINE = 2,
             IDENTITY_MATRIX = 3,
             FIBONACCI_SERIES = 4,
+            ASCENDING_ORDER = 5,
         };
 
         static void Main(string[] args)
@@ -23,6 +24,7 @@ namespace CSharpCorner_Challengers
             Console.WriteLine("2. Same Straight Line");
             Console.WriteLine("3. Identity Matrix");
             Console.WriteLine("4. Fibonacci Series");
+            Console.WriteLine("5. Ascending Order");
             Console.WriteLine("\nSolve problem number: ");
             int problemNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -116,6 +118,34 @@ namespace CSharpCorner_Challengers
                     }
                     break;
 
+                case ((int)PROBLEMS.ASCENDING_ORDER):
+                    {
+                        Console.WriteLine("\n/*****************************************************************");
+                        Console.WriteLine("Write a program that takes n values from user and then sorts them in");
+                        Console.WriteLine("ascending order.");
+                        Console.WriteLine("*****************************************************************/\n");
+
+                        Console.WriteLine("Enter the number of elements to sort: ");
+                        int length = Convert.ToInt32(Console.ReadLine());
+                        int[] array = new int[length];
+
+                        for (int i = 0; i < length; i++)
+                        {
+                            Console.WriteLine("Enter element " + (i + 1));
+                            array[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+
+                        AscendingOrder ascendingorder = new AscendingOrder();
+                        array = ascendingorder.SortAscending(array);
+
+                        Console.WriteLine("\nValues in Ascending Order");
+                        for (int i = 0; i < length; i++)
+                        {
+                            Console.WriteLine(array[i]);
+                        }
+                        Console.ReadKey();
+                    }
+                    break;
                 default:
                     break;
             }
